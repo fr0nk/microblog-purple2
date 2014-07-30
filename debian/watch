@@ -1,0 +1,3 @@
+version=3
+http://code.google.com/p/microblog-purple/downloads/list \
+  http://microblog-purple[.]googlecode[.]com/files/mbpurple-([0-9.]+)[.]tar[.]gz

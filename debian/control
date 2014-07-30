@@ -1,0 +1,18 @@
+Source: mbpurple
+Section: universe/net
+Priority: extra
+Maintainer: Sugree Phatanapherom <sugree@gmail.com>
+Build-Depends: debhelper (>= 6), cdbs (>= 0.4), pkg-config, libpurple-dev, pidgin-dev
+Standards-Version: 3.8.0
+Homepage: http://code.google.com/p/microblog-purple/
+
+Package: pidgin-microblog
+Architecture: any
+Depends: pidgin
+Description: Microblog, Twitter, plugins for pidgin
+ Microblog plugins for pidgin
+ .
+ This is a pidgin plugin which implements microblog, e.g.,
+ Twitter and Laconi.ca.
+ .
+ Homepage: http://code.google.com/p/microblog-purple/

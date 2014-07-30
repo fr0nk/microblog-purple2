@@ -1,0 +1,184 @@
+mbpurple (0.2.3-1~ppa2) jaunty; urgency=low
+
+  [ somsaks ]
+  * Fix the duplicate tweets due to overflow problem
+  * Update version
+  * Fix urgent bugs
+  * git-svn-id: https://microblog-purple.googlecode.com/svn/trunk@293
+    c93ce494-aa52-0410-a5ec-afe58518fd76
+  * Add GPL header
+  * Makefile for certs dir
+  * Fix reply bug (occur from my Typo!)
+
+  [ sugree ]
+  * Imported Upstream version 0.2.2
+  * reset permission
+  * debian
+  * updated changelog and removed binary files
+
+  [ somsaks ]
+  * Install certs on all platform
+  * Add zipdist target to Makefile
+  * Add patch for not receiving tweet while 'do not disturb'
+  * Fix unreachable crash bug (issue #132)
+  * Add code to detect rate limit exceed
+  * (Trying to) fix issue #132
+  * Remove unused code
+  * Fix(ing) issue #132
+  * Patch with patch from ake.hepcat
+  * Merge back reply and rt (old style)
+  * Fix mismatch plug-in bug with reply
+  * Increase version
+  * Eclipse tryout
+  * Merge timezone patched from ake.hepcat
+  * Fix 2.6 and 2.5 compatibility
+  * Add subversion.mak to DISTFILES
+
+ -- Sugree Phatanapherom <sugree@gmail.com>  Tue, 22 Sep 2009 18:32:55 +0700
+
+mbpurple (0.2.2-1~ppa1) jaunty; urgency=low
+
+  [ somsaks ]
+  * Move twitter_favorite_message into twitter.c
+  * Fix issue #69
+  * Fix retweet text not working
+  * Adium (Xcode) compatibility merge
+
+  [ jsippel ]
+  * merging branch adium-merge into trunk
+
+  [ somsaks ]
+  * Remove possible crash in debugging message
+  * Fix retweet bug on Identi.ca
+  * Embed src into all links
+  * Fix duplicate logging
+  * Move twitter message decode outside timeline fetching code
+  * Fix "help is not displayed" bug
+  * Enable/disable rt and * through preference windows
+  * Add avatar preference
+
+  [ jsippel ]
+  * updated to allow for advanced configurations, including refresh
+    rate, SSL, and host name
+  * updated to allow for advanced configurations, including refresh
+    rate, SSL, and host name
+
+  [ sugree ]
+  * fixed missing tab highlight
+  * added no_log back. use PURPLE_MESSAGE_NICK instead.
+
+  [ nopparat.no ]
+  * Make timestamp link back to message status (just like twitter web)
+
+  [ neaveru ]
+  * Issue 81 fix. Change in status causes missing timeline event
+
+  [ somsaks ]
+  * Add more debugging message, hunting down the cause that crash
+    Pidgin.
+
+  [ sugree ]
+  * fixed incorrect timezone calculation
+
+  [ jsippel ]
+  * Added #ifdef to set client name to mbadium
+
+  [ sugree ]
+  * according to proxy.c, fd must be closed manually.
+  * unescape rt
+  * trying to fix segfault when disconnected while connecting
+
+  [ jsippel ]
+  * fixed some UI stuff for the Options panel
+
+  [ somsaks ]
+  * Add function to save sent id hash, so self tweet will not coming
+    back, while tweets from other client will coming back
+  * Fix(ing) mb_http to use purple_fetch_url
+  * git-svn-id: https://microblog-purple.googlecode.com/svn/trunk@280
+    c93ce494-aa52-0410-a5ec-afe58518fd76
+  * Completely change to purple_fetch_url
+  * Rip off code that is unnecessary
+  * Patch with diff from bug reporter
+
+  [ jsippel ]
+  * updated version
+  * added default value
+  * updating adium version
+  * updating adium version
+  * updating adium version
+
+  [ sugree ]
+  * ignored all tweets with old id
+
+  [ somsaks ]
+  * Fix the duplicate tweets due to overflow problem
+  * Update version
+  * Fix urgent bugs
+  * git-svn-id: https://microblog-purple.googlecode.com/svn/trunk@293
+    c93ce494-aa52-0410-a5ec-afe58518fd76
+  * Add GPL header
+  * Makefile for certs dir
+  * Fix reply bug (occur from my Typo!)
+
+  [ Sugree Phatanapherom ]
+  * Imported Upstream version 0.2.2
+  * reset permission
+  * debian
+
+ -- Sugree Phatanapherom <sugree@gmail.com>  Sun, 14 Jun 2009 19:59:07 +0700
+
+mbpurple (0.2.1-1~ppa4) intrepid; urgency=low
+
+  * Decreased compat to 6 for hardy 
+
+ -- Sugree Phatanapherom <sugree@gmail.com>  Tue, 03 Mar 2009 15:29:55 +0700
+
+mbpurple (0.2.1-1~ppa3) intrepid; urgency=low
+
+  * Decreased debhelper minimum version to 6 for hardy
+
+ -- Sugree Phatanapherom <sugree@gmail.com>  Tue, 03 Mar 2009 14:27:27 +0700
+
+mbpurple (0.2.1-1~ppa2) intrepid; urgency=low
+
+  * Added missing twitpref.h
+
+ -- Sugree Phatanapherom <sugree@gmail.com>  Tue, 03 Mar 2009 13:52:44 +0700
+
+mbpurple (0.2.1-1~ppa1) intrepid; urgency=low
+
+  * New upstream version
+
+ -- Sugree Phatanapherom <sugree@gmail.com>  Mon, 02 Mar 2009 22:20:31 +0700
+
+mbpurple (0.2.0-1~ppa3) intrepid; urgency=low
+
+  * Fixed incorrect changelog
+
+ -- Sugree Phatanapherom <sugree@gmail.com>  Fri, 07 Nov 2008 23:15:54 +0700
+
+mbpurple (0.2.0-1~ppa2) intrepid; urgency=low
+
+  * Added missing dependency to pidgin-dev
+
+ -- Sugree Phatanapherom <sugree@gmail.com>  Fri, 07 Nov 2008 22:59:04 +0700
+
+mbpurple (0.2.0-1~ppa1) intrepid; urgency=low
+
+  * New upstream version
+
+ -- Sugree Phatanapherom <sugree@gmail.com>  Fri, 07 Nov 2008 22:44:56 +0700
+
+mbpurple (0.1.2-1~getdeb1) hardy; urgency=low
+
+  * New upstream version
+
+ -- Sugree Phatanapherom <sugree@gmail.com>  Tue, 02 Sep 2008 23:15:21 +0700
+
+microblog-purple (0.1-1~getdeb1) hardy; urgency=low
+
+  * Initial release
+
+ -- Sugree Phatanapherom <sugree@gmail.com>  Wed, 30 Jul 2008 00:42:25 +0700
+
