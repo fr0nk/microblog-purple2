@@ -325,6 +325,9 @@ char * twitter_decode_error(const char * data)
   	error_str = json_reader_get_string_value (reader);
   	json_reader_end_member (reader);
 
+	g_object_unref(reader);
+	g_object_unref(parser);
+
   	return error_str;
 }
 
@@ -431,6 +434,9 @@ GList * twitter_decode_messages(const char * data, time_t * last_msg_time)
 		//printf("%s\n",msg_txt);
 	}
 
+	g_free(protected);
+	g_free(id_str);
+
 	return retval;
 
 }
@@ -494,7 +500,7 @@ gint twitter_fetch_new_messages_handler(MbConnData * conn_data, gpointer data, c
 		twitter_free_tlr(tlr);
 		return 0;
 	}
-	
+
 	// reverse the list and append it
 	// only if id > last_msg_id
 	hide_myself = purple_account_get_bool(ma->account, mc_name(TC_HIDE_SELF), mc_def_bool(TC_HIDE_SELF));
@@ -1042,6 +1048,10 @@ gint twitter_send_im_handler(MbConnData * conn_data, gpointer data, const char *
 	
 	//hash_table supposed to free this for use
 	g_free(id_str);
+	g_object_unref(reader);
+	g_object_unref(parser);
+
+
 	return 0;
 }
 
