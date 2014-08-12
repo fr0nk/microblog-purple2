@@ -2,7 +2,7 @@
 # Microblog protocol plug-in
 #
 
-all: build 
+all: build
 
 include ../global.mak
 
@@ -20,21 +20,23 @@ TWITGIN_INC_PATHS += -I$(GTK_TOP)/include/gtk-2.0 \
 			-I../microblog/
 
 
-LIB_PATHS += -L$(GTK_TOP)/lib \
+LIB_PATHS += 		-L../win32-deps/json-glib-0.12.4/lib \
+			-L$(GTK_TOP)/lib \
 			-L$(PURPLE_TOP) \
 			-L$(PIDGIN_TOP)
-			
+
 LIBS =	-lgtk-win32-2.0 \
 			-lglib-2.0 \
 			-lgdk-win32-2.0 \
 			-lgobject-2.0 \
+			-ljson-glib-1.0 \
 			-lintl \
 			-lpurple \
 			-lpidgin
 CFLAGS := $(PURPLE_CFLAGS) $(TWITGIN_INC_PATHS)
 else
 CFLAGS := $(PURPLE_CFLAGS) $(PIDGIN_CFLAGS) -I../microblog/
-LIB_PATHS = 
+LIB_PATHS =
 LIBS = $(PIDGIN_LIBS)
 endif
 
@@ -55,7 +57,7 @@ install: $(TARGETS)
 	install -m 0755 -d $(PURPLE_PLUGIN_DIR)
 	cp twitgin$(PLUGIN_SUFFIX) $(PURPLE_PLUGIN_DIR)/twitgin$(PLUGIN_SUFFIX)
 
-uninstall: 
+uninstall:
 	rm -f $(PURPLE_PLUGIN_DIR)/twitgin$(PLUGIN_SUFFIX)
 
 clean:

@@ -6,7 +6,7 @@
 
 # PIDGIN_TREE_TOP is only meaningful on Windows, point it to top directory of Pidgin. IT MUST BE A RELATIVE PATH
 # It MUST realitve to each subdirectory (microblog, twitgin)
-PIDGIN_TREE_TOP := ../../pidgin-2.6.6
+PIDGIN_TREE_TOP := ../../pidgin-2.10.7
 
 # For Linux
 DESTDIR := 
@@ -38,23 +38,27 @@ INCLUDE_PATHS +=	-I. \
 			-I$(GTK_TOP)/include \
 			-I$(GTK_TOP)/include/glib-2.0 \
 			-I$(GTK_TOP)/lib/glib-2.0/include \
-			-I$(GTK_TOP)/include/json-glib-1.0 \
 			-I$(PURPLE_TOP) \
 			-I$(PURPLE_TOP)/win32 \
 			-I$(PIDGIN_TREE_TOP) \
 			-I$(PIDGIN_TOP) \
 			-I$(GTK_TOP)/include/gtk-2.0 \
+			-I$(GTK_TOP)/include/gdk-pixbuf-2.0 \
 			-I$(GTK_TOP)/include/pango-1.0 \
 			-I$(GTK_TOP)/include/atk-1.0 \
 			-I$(GTK_TOP)/include/cairo \
 			-I$(GTK_TOP)/lib/gtk-2.0/include \
+			-I../win32-deps/json-glib-0.12.4/include \
 			-I$(PIDGIN_TOP)/win32  \
 
 
-LIBS += -lglib-2.0 \
+LIBS += 		-L../win32-deps/json-glib-0.12.4/lib \
+			-lglib-2.0 \
 			-lintl \
 			-lws2_32 \
 			-lpurple \
+			-lgobject-2.0 \
+			-ljson-glib-1.0 \
 			$(PIDGIN_TOP)/pidgin$(PLUGIN_SUFFIX)
 			
 PURPLE_LIBS = -L$(GTK_TOP)/lib -L$(PURPLE_TOP) $(LIBS)
