@@ -1047,7 +1047,7 @@ gint twitter_send_im_handler(MbConnData * conn_data, gpointer data, const char *
 	g_hash_table_insert(ma->sent_id_hash, id_str, id_str);
 	
 	//hash_table supposed to free this for use
-	g_free(id_str);
+	//g_free(id_str);
 	g_object_unref(reader);
 	g_object_unref(parser);
 
